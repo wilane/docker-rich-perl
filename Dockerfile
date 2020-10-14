@@ -3,6 +3,8 @@ FROM ubuntu:latest
 LABEL version="1.10"
 LABEL maintainer="Steve Guo <steve.guo@thunes.com>"
 
+ENV DEBIAN_FRONTEND="noninteractive" TZ="Africa/Dakar"
+
 RUN apt-get update \
     && apt-get -y install build-essential git curl zip runit \
     && apt-get -y install libqrencode-dev libexpat1-dev libxml2-dev zlib1g-dev \
